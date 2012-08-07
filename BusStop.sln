@@ -1,7 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+# Visual Web Developer Express 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Api", "BusStop.Api\BusStop.Api.csproj", "{200BE292-6449-4117-AD01-2240B877C80B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Contracts", "BusStop.Contracts\BusStop.Contracts.csproj", "{54C28089-E771-45C0-BFCF-8AB78021AE99}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,6 +15,10 @@ Global
 		{200BE292-6449-4117-AD01-2240B877C80B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{200BE292-6449-4117-AD01-2240B877C80B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{200BE292-6449-4117-AD01-2240B877C80B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
