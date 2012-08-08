@@ -11,8 +11,7 @@ namespace BusStop.Api.Controllers
 {
     public class OrdersController : ApiController
     {
-        public IBus Bus { get; set; }
-
+      
         public Guid Get()
         {
             var order = new PlaceOrder
@@ -22,7 +21,7 @@ namespace BusStop.Api.Controllers
                     CustomerId = Guid.NewGuid(),
                 };
 
-            Bus.Send(order);
+            WebApiApplication.Bus.Send(order);
 
             return order.OrderId;
         }
