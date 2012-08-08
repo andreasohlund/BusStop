@@ -1,9 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Web Developer Express 2010
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Api", "BusStop.Api\BusStop.Api.csproj", "{200BE292-6449-4117-AD01-2240B877C80B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Contracts", "BusStop.Contracts\BusStop.Contracts.csproj", "{54C28089-E771-45C0-BFCF-8AB78021AE99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Backend", "BusStop.Backend\BusStop.Backend.csproj", "{65C18267-554F-4391-AD9E-F4CBBB98F58B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +21,10 @@ Global
 		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54C28089-E771-45C0-BFCF-8AB78021AE99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65C18267-554F-4391-AD9E-F4CBBB98F58B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65C18267-554F-4391-AD9E-F4CBBB98F58B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65C18267-554F-4391-AD9E-F4CBBB98F58B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65C18267-554F-4391-AD9E-F4CBBB98F58B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
