@@ -5,22 +5,17 @@ using System.Text;
 using NServiceBus;
 using BusStop.Contracts;
 using Raven.Client.Document;
+using Raven.Client;
 
 namespace BusStop.Backend
 {
     public class PlaceOrderHandler:IHandleMessages<PlaceOrder>
     {
+        public IDocumentStore Store { get; set; }
+
         public void Handle(PlaceOrder message)
         {
-            var store = new DocumentStore 
-            { 
-                Url = "http://localhost:8080"
-            };
-
-            store.Initialize();
-            store.JsonRequestFactory.DisableRequestCompression = true;
-
-            using (var session = store.OpenSession())
+            using (var session = Store.OpenSession())
             {
                 session.Store(new Order
                 {
