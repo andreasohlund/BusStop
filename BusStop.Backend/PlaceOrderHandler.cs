@@ -9,22 +9,16 @@ using Raven.Client;
 
 namespace BusStop.Backend
 {
-    public class PlaceOrderHandler:IHandleMessages<PlaceOrder>
+    public class PlaceOrderHandler : IHandleMessages<PlaceOrder>
     {
-        public IDocumentStore Store { get; set; }
+        public IDocumentSession Session { get; set; }
 
         public void Handle(PlaceOrder message)
         {
-            using (var session = Store.OpenSession())
+            Session.Store(new Order
             {
-                session.Store(new Order
-                {
-                    OrderId = message.OrderId
-                });
-
-                session.SaveChanges();
-            }
-
+                OrderId = message.OrderId
+            });
 
             Console.WriteLine("Order received " + message.OrderId);
         }
