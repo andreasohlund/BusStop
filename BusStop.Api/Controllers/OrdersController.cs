@@ -6,6 +6,7 @@ using System.Net.Http;
 using System.Web.Http;
 using BusStop.Contracts;
 using NServiceBus;
+using System.Web;
 
 namespace BusStop.Api.Controllers
 {
@@ -20,6 +21,8 @@ namespace BusStop.Api.Controllers
                     ProductId = Guid.NewGuid(),
                     CustomerId = Guid.NewGuid(),
                 };
+
+            order.SetHeader("access_token", HttpContext.Current.Request.Params["access_token"]);
 
             WebApiApplication.Bus.Send(order);
 
