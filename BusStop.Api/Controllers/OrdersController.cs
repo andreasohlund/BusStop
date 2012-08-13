@@ -22,8 +22,6 @@ namespace BusStop.Api.Controllers
                     CustomerId = Guid.NewGuid(),
                 };
 
-            order.SetHeader("access_token", HttpContext.Current.Request.Params["access_token"]);
-
             WebApiApplication.Bus.Send(order);
 
             return order.OrderId;
