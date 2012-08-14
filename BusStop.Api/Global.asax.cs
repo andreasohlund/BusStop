@@ -7,6 +7,7 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using NServiceBus;
+using BusStop.Injection;
 
 namespace BusStop.Api
 {
@@ -15,8 +16,6 @@ namespace BusStop.Api
 
     public class WebApiApplication : System.Web.HttpApplication
     {
-        public static IBus Bus { get; set; }
-
         protected void Application_Start()
         {
             AreaRegistration.RegisterAllAreas();
@@ -25,9 +24,10 @@ namespace BusStop.Api
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
-            Bus = Configure.With()
+            Configure.With()
                 .Log4Net()
                 .DefaultBuilder()
+                .ForWebApi()
                 .XmlSerializer()
                 .MsmqTransport()
                 .UnicastBus()
