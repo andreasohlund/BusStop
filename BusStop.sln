@@ -14,6 +14,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{ACD1ED
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Authentication", "BusStop.Authentication\BusStop.Authentication.csproj", "{33102B4F-7504-4CAF-A0FF-908DD3445B6C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BusStop.Config", "BusStop.Config\BusStop.Config.csproj", "{67603B99-8753-43AA-A734-5756007AF5BB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,6 +38,10 @@ Global
 		{33102B4F-7504-4CAF-A0FF-908DD3445B6C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33102B4F-7504-4CAF-A0FF-908DD3445B6C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33102B4F-7504-4CAF-A0FF-908DD3445B6C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67603B99-8753-43AA-A734-5756007AF5BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67603B99-8753-43AA-A734-5756007AF5BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67603B99-8753-43AA-A734-5756007AF5BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67603B99-8753-43AA-A734-5756007AF5BB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
