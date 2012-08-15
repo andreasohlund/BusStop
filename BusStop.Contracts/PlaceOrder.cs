@@ -14,4 +14,15 @@ namespace BusStop.Contracts
 
         public Guid CustomerId { get; set; }
     }
+
+    public class CancelOrder : IMessage
+    {
+        public Guid OrderId { get; set; }
+    }
+
+    public enum CommandStatus
+    { 
+        Failed = 0,
+        Success = 1
+    }
 }
