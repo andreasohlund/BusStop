@@ -68,7 +68,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CancelOrderHandler.cs" />
+    <Compile Include="ChargeCustomerHandler.cs" />
     <Compile Include="EndpointConfig.cs" />
+    <Compile Include="INeedIntialization.cs" />
     <Compile Include="PlaceOrderHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RavenBootstrapper.cs" />
