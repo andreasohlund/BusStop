@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{33102B4F-7504-4CAF-A0FF-908DD3445B6C}</ProjectGuid>
+    <ProjectGuid>{49F589EC-3690-4B6E-ACD8-DE76666BBF79}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BusStop.Authentication</RootNamespace>
-    <AssemblyName>BusStop.Authentication</AssemblyName>
+    <RootNamespace>BusStop.Billing.CreditCardGateway</RootNamespace>
+    <AssemblyName>BusStop.Billing.CreditCardGateway</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -42,6 +42,9 @@
     <Reference Include="NServiceBus.Core">
       <HintPath>..\packages\NServiceBus.3.2.7\lib\net40\NServiceBus.Core.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.3.2.7\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -51,12 +54,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccessTokenPropagator.cs" />
-    <Compile Include="AuthenticationHandler.cs" />
+    <Compile Include="ChargeCreditCardHandler.cs" />
+    <Compile Include="CreditCardService.cs" />
+    <Compile Include="EndpointConfig.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusStop.Authentication\BusStop.Authentication.csproj">
+      <Project>{33102B4F-7504-4CAF-A0FF-908DD3445B6C}</Project>
+      <Name>BusStop.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Billing.Contracts\BusStop.Billing.Contracts.csproj">
+      <Project>{8995D69F-CB72-4286-B47A-3BE72FC073D2}</Project>
+      <Name>BusStop.Billing.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Config\BusStop.Config.csproj">
+      <Project>{67603B99-8753-43AA-A734-5756007AF5BB}</Project>
+      <Name>BusStop.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Contracts\BusStop.Contracts.csproj">
+      <Project>{54C28089-E771-45C0-BFCF-8AB78021AE99}</Project>
+      <Name>BusStop.Contracts</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\nuget.targets" />
@@ -67,4 +90,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
 </Project>

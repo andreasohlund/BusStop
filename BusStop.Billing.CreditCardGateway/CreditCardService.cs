@@ -2,23 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using NServiceBus;
-using BusStop.Contracts;
 using NServiceBus.Config;
+using NServiceBus;
 
-namespace BusStop.Backend
+namespace BusStop.Billing.CreditCardGateway
 {
-    class ChargeCustomerHandler : IHandleMessages<PlaceOrder>
-    {
-        public ICreditCardService CreditCardService { get; set; }
-        public void Handle(PlaceOrder message)
-        {
-            var receipt = CreditCardService.Charge(message.CustomerId, 100);
-
-            //todo: store receipt in raven db
-        }
-    }
-
     public interface ICreditCardService
     {
         string Charge(Guid customerId, double amount);

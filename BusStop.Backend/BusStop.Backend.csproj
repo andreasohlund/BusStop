@@ -68,9 +68,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CancelOrderHandler.cs" />
-    <Compile Include="ChargeCustomerHandler.cs" />
+    <Compile Include="CreditCardChargedHandler.cs" />
     <Compile Include="EndpointConfig.cs" />
-    <Compile Include="INeedIntialization.cs" />
     <Compile Include="PlaceOrderHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RavenBootstrapper.cs" />
@@ -83,6 +82,10 @@
     <ProjectReference Include="..\BusStop.Authentication\BusStop.Authentication.csproj">
       <Project>{33102B4F-7504-4CAF-A0FF-908DD3445B6C}</Project>
       <Name>BusStop.Authentication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Billing.Contracts\BusStop.Billing.Contracts.csproj">
+      <Project>{8995D69F-CB72-4286-B47A-3BE72FC073D2}</Project>
+      <Name>BusStop.Billing.Contracts</Name>
     </ProjectReference>
     <ProjectReference Include="..\BusStop.Config\BusStop.Config.csproj">
       <Project>{67603B99-8753-43AA-A734-5756007AF5BB}</Project>
