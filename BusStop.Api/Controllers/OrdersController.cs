@@ -4,9 +4,9 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
-using BusStop.Contracts;
 using NServiceBus;
 using System.Web;
+using BusStop.Sales.InternalMessages;
 
 namespace BusStop.Api.Controllers
 {

@@ -111,9 +111,9 @@
       <Project>{67603B99-8753-43AA-A734-5756007AF5BB}</Project>
       <Name>BusStop.Config</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BusStop.Contracts\BusStop.Contracts.csproj">
-      <Project>{54C28089-E771-45C0-BFCF-8AB78021AE99}</Project>
-      <Name>BusStop.Contracts</Name>
+    <ProjectReference Include="..\BusStop.Sales.InternalMessages\BusStop.Sales.InternalMessages.csproj">
+      <Project>{80A4FD7D-C5D6-4EAE-AC52-FACD5663DF4F}</Project>
+      <Name>BusStop.Sales.InternalMessages</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

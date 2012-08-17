@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using NServiceBus;
 
-namespace BusStop.Billing.Contracts
+namespace BusStop.Billing.InternalMessages
 {
     public class ChargeCreditCard:IMessage
     {

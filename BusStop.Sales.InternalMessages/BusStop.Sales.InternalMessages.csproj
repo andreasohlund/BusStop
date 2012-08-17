@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>8.0.30703</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8995D69F-CB72-4286-B47A-3BE72FC073D2}</ProjectGuid>
+    <ProjectGuid>{80A4FD7D-C5D6-4EAE-AC52-FACD5663DF4F}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>BusStop.Billing.Contracts</RootNamespace>
-    <AssemblyName>BusStop.Billing.Contracts</AssemblyName>
+    <RootNamespace>BusStop.Sales.InternalMessages</RootNamespace>
+    <AssemblyName>BusStop.Sales.InternalMessages</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
@@ -45,6 +45,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PlaceOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

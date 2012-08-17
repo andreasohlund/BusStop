@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using BusStop.Billing.Contracts;
 using NServiceBus;
+using BusStop.Billing.InternalMessages;
 
-namespace BusStop.Backend
+namespace BusStop.Billing
 {
     class CreditCardChargedHandler:IHandleMessages<CreditCardCharged>
     {

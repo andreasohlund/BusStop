@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using NServiceBus;
 
-namespace BusStop.Contracts
+namespace BusStop.Sales.InternalMessages
 {
     public class PlaceOrder : IMessage
     {

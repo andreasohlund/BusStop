@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NServiceBus;
-using BusStop.Contracts;
 using Raven.Client.Document;
 using Raven.Client;
-using BusStop.Billing.Contracts;
+using BusStop.Sales.InternalMessages;
 
-namespace BusStop.Backend
+namespace BusStop.Sales
 {
     public class PlaceOrderHandler : IHandleMessages<PlaceOrder>
     {
@@ -22,11 +21,11 @@ namespace BusStop.Backend
                 OrderId = message.OrderId
             });
 
-            Bus.Send(new ChargeCreditCard
-            {
-                CustomerId = message.CustomerId,
-                Amount = 100
-            });
+            //Bus.Send(new ChargeCreditCard
+            //{
+            //    CustomerId = message.CustomerId,
+            //    Amount = 100
+            //});
 
             Console.WriteLine("Order received " + message.OrderId);
         }

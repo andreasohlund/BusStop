@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NServiceBus;
-using BusStop.Contracts;
-using BusStop.Billing.Contracts;
+using BusStop.Billing.InternalMessages;
 
 namespace BusStop.Billing.CreditCardGateway
 {

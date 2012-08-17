@@ -68,17 +68,13 @@
       <Project>{33102B4F-7504-4CAF-A0FF-908DD3445B6C}</Project>
       <Name>BusStop.Authentication</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BusStop.Billing.Contracts\BusStop.Billing.Contracts.csproj">
-      <Project>{8995D69F-CB72-4286-B47A-3BE72FC073D2}</Project>
-      <Name>BusStop.Billing.Contracts</Name>
+    <ProjectReference Include="..\BusStop.Billing.InternalMessages\BusStop.Billing.InternalMessages.csproj">
+      <Project>{D40CFCC0-7F70-44DB-BF90-C015770E5F53}</Project>
+      <Name>BusStop.Billing.InternalMessages</Name>
     </ProjectReference>
     <ProjectReference Include="..\BusStop.Config\BusStop.Config.csproj">
       <Project>{67603B99-8753-43AA-A734-5756007AF5BB}</Project>
       <Name>BusStop.Config</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\BusStop.Contracts\BusStop.Contracts.csproj">
-      <Project>{54C28089-E771-45C0-BFCF-8AB78021AE99}</Project>
-      <Name>BusStop.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

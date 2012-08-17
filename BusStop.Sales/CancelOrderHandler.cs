@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using NServiceBus;
-using BusStop.Contracts;
+using BusStop.Sales.InternalMessages;
 
-namespace BusStop.Backend
+namespace BusStop.Sales
 {
     class CancelOrderHandler:IHandleMessages<CancelOrder>
     {
