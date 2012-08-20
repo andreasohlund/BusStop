@@ -5,9 +5,9 @@ using System.Text;
 using NServiceBus;
 using BusStop.Authentication;
 
-namespace BusStop.Backend
+namespace BusStop.Billing
 {
-    public class EndpointConfig:IConfigureThisEndpoint,AsA_Publisher,ISpecifyMessageHandlerOrdering
+    public class EndpointConfig:IConfigureThisEndpoint,AsA_Server,ISpecifyMessageHandlerOrdering
     {
         public void SpecifyOrder(NServiceBus.Order order)
         {

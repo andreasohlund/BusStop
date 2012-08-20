@@ -6,6 +6,7 @@ using NServiceBus;
 using Raven.Client.Document;
 using Raven.Client;
 using BusStop.Sales.InternalMessages;
+using BusStop.Sales.Contracts;
 
 namespace BusStop.Sales
 {
@@ -21,11 +22,11 @@ namespace BusStop.Sales
                 OrderId = message.OrderId
             });
 
-            //Bus.Send(new ChargeCreditCard
-            //{
-            //    CustomerId = message.CustomerId,
-            //    Amount = 100
-            //});
+            Bus.Publish(new OrderAccepted
+            {
+                CustomerId = message.CustomerId,
+                OrderId = message.OrderId
+            });
 
             Console.WriteLine("Order received " + message.OrderId);
         }

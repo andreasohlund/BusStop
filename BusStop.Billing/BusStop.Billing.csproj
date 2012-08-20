@@ -42,6 +42,9 @@
     <Reference Include="NServiceBus.Core">
       <HintPath>..\packages\NServiceBus.3.2.7\lib\net40\NServiceBus.Core.dll</HintPath>
     </Reference>
+    <Reference Include="NServiceBus.Host">
+      <HintPath>..\packages\NServiceBus.Host.3.2.7\lib\net40\NServiceBus.Host.exe</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,15 +55,30 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CreditCardChargedHandler.cs" />
+    <Compile Include="EndpointConfig.cs" />
+    <Compile Include="OrderAcceptedHandler.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="app.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusStop.Authentication\BusStop.Authentication.csproj">
+      <Project>{33102B4F-7504-4CAF-A0FF-908DD3445B6C}</Project>
+      <Name>BusStop.Authentication</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BusStop.Billing.InternalMessages\BusStop.Billing.InternalMessages.csproj">
       <Project>{D40CFCC0-7F70-44DB-BF90-C015770E5F53}</Project>
       <Name>BusStop.Billing.InternalMessages</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Config\BusStop.Config.csproj">
+      <Project>{67603B99-8753-43AA-A734-5756007AF5BB}</Project>
+      <Name>BusStop.Config</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusStop.Sales.Contracts\BusStop.Sales.Contracts.csproj">
+      <Project>{AA5628F6-07FE-4035-A8E0-10D9DBFE51A7}</Project>
+      <Name>BusStop.Sales.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
@@ -72,4 +90,8 @@
   <Target Name="AfterBuild">
   </Target>
   -->
+  <PropertyGroup>
+    <StartAction>Program</StartAction>
+    <StartProgram>$(ProjectDir)$(OutputPath)NServiceBus.Host.exe</StartProgram>
+  </PropertyGroup>
 </Project>

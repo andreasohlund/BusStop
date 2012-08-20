@@ -72,6 +72,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusStop.Sales.Contracts\BusStop.Sales.Contracts.csproj">
+      <Project>{AA5628F6-07FE-4035-A8E0-10D9DBFE51A7}</Project>
+      <Name>BusStop.Sales.Contracts</Name>
+    </ProjectReference>
     <ProjectReference Include="..\BusStop.Sales.InternalMessages\BusStop.Sales.InternalMessages.csproj">
       <Project>{80A4FD7D-C5D6-4EAE-AC52-FACD5663DF4F}</Project>
       <Name>BusStop.Sales.InternalMessages</Name>
